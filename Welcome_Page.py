@@ -17,15 +17,15 @@ if not hasattr(st.session_state,"mention_data"):
     st.session_state.mention_data = tweets.explode('mentions')
 
 st.title("Exploring Election Discussion on Twitter")
-st.markdown("""Welcome to this tool for exporing tweets collected during and about the 2022 Midterm Elections.
-                This app will allow you to filter and vizualize from our dataset of tweets which have been mapped
-                to topics using BERTopic. A link to our full report can be found [here] where you can find our discussion
-                of analysis and methods. Feel free to check out our source code located [here]""")
+st.markdown("""Welcome to this tool for exploring tweets collected during and about the 2022 Midterm Elections.
+                This app will allow you to filter and visualize from our dataset of tweets which have been mapped
+                to topics using BERTopic. A link to our full report can be found [here](https://github.com/kylearbide/miderm_election_tweets/blob/main/Analysis%20of%20Midterm%20Election%20On%20Twitter%20Report%20Group%209.docx.pdf) where you can find our discussion
+                of analysis and methods. Feel free to check out our source code located [here](https://github.com/kylearbide/miderm_election_tweets)""")
 
 st.header("Exploratory Analysis")
 st.markdown("""During our analysis, we discovered some trends and were able to distinguish between two
-types of topics: continuous and event based. Continuous topics are consistently prevelant in the data and typically
-increase in frequency along with the frequency of total tweets. A timeseries representation of this type of topic will
+types of topics: continuous and event based. Continuous topics are consistently prevalent in the data and typically
+increase in frequency along with the frequency of total tweets. A time-series representation of this type of topic will
 look something like this:
 """)
 
@@ -46,9 +46,9 @@ fig = px.line(simple_grouped_tweets, x = 'date', y = 'size_log', color = 'Name',
                 title="Time series of Consistently Popular Topics")
 st.plotly_chart(fig)
 
-st.markdown("""Event based topics see large spikes in frequecy at certain times but generally are discussed
-fairly infrequently. We theorize that this is occurs when topics are coorelated with real like events, but this
-could happen for a number of reasons (ex. bot spamming). The timeseries representation of this type of topic looks something
+st.markdown("""Event based topics see large spikes in frequency at certain times but generally are discussed
+fairly infrequently. We theorize that this is occurs when topics are correlated with real like events, but this
+could happen for a number of reasons (ex. bot spamming). The time-series representation of this type of topic looks something
 like this:
 """)
 

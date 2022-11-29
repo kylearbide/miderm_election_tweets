@@ -7,7 +7,7 @@ from ast import literal_eval
 st.markdown("# Filter by Mentions")
 
 st.markdown("""This page allows you to filter for tweets were a specified user is mentioned. The purpose here is
-            to allow you understand what topics are being discussed in coorelation with specific people or media group.
+            to allow you understand what topics are being discussed in correlation with specific people or media group.
             Need some inspiration? Try search for one of the most popular users show below...
             """)
 
